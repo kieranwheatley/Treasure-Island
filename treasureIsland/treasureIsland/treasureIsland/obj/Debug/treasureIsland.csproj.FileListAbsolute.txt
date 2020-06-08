@@ -1,0 +1,7 @@
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\bin\Debug\treasureIsland.exe.config
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\bin\Debug\treasureIsland.exe
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\bin\Debug\treasureIsland.pdb
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\obj\Debug\treasureIsland.csprojAssemblyReference.cache
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\obj\Debug\treasureIsland.csproj.CoreCompileInputs.cache
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\obj\Debug\treasureIsland.exe
+C:\Users\Kieran\Documents\Programming\C#\New folder\treasureIsland\treasureIsland\obj\Debug\treasureIsland.pdb
