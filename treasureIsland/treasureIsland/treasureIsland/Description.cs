@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace treasureIsland
 {
     class Description
     {
-        private string[,] description = new string[5,5];
+        private string[,] description = new string[5, 5];
         public Description()
         {
             description[0, 0] = "You come come to the base of a volcano, smoke pouring from the top.\nThe sea crashes around the sides, there's no way past it.";
@@ -30,16 +31,19 @@ namespace treasureIsland
             description[3, 1] = "Birds fly between the trees above you, singing with each other. The canopy of the jungle\nspreads North and West. To the East you can smell the ocean.\nYou can see some wooden huts to the South.";
             description[3, 2] = "You stand between some old wooden huts and a huge gate covering a cave entrance.\nA huge chain seals the gate closed. You can see a beach to the East.\nThe jungle surrounds you from all other directions.";
             description[3, 3] = "You're stood in a small river in the jungle, the gentle flowing water cooling you.\nThe water is running North into the jungle, that continues East as well.\nThe river is flowing from the East, where you can see a glimpse of\nthe ocean. To the South, you can see rocks.";
-            description[3, 4] = "You're stood on the cliff edge which stretches upwards West. The cliff descriptionends into the Sea and the jungle is North.";
+            description[3, 4] = "You're stood on the cliff edge which stretches upwards West. The cliff descends into the Sea and the jungle is North.";
             description[4, 0] = "You cannot move further North or East as the jungle becomes almost pitch black\nand the trees become to close and dense. You can see a beach to the South and the Jungle thins to the West.";
             description[4, 1] = "You're stood on the beach, with the sun in your eyes. The jungle grows from the\nNorth and West. To the South, you can see items sticking out of the sand.";
             description[4, 2] = "You are surrounded by mostly junk scattered across the beach.\nThe beach continues to the North and South. To the West, you can see wooden huts.";
             description[4, 3] = "You stand on the edge of the water. The beach sprawls North.\nTrees line the West and to the South there are some flat rocks.";
             description[4, 4] = "You're standing on rocks in water. However, the waves are getting stronger.\nThe rocks rise us to the West into a cliff. A beach spreads to the North.";
         }
-        public string getDescription(int x, int y)
+
+        public string getDescription(Player player)
         {
-            return description[x,y];
+            int x = player.getPlayerX();
+            int y = player.getPlayerY();
+            return description[x, y];
         }
     }
 }

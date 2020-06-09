@@ -1,6 +1,8 @@
 ﻿ using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,29 +11,42 @@ namespace treasureIsland
 {
     class treasureIsland
     {
+        public static Description description = new Description();
         static void Main(string[] args)
         {
             Console.WriteLine(" \n\t Welcome to...\n\tTREASURE ISLAND!\n");
             startMenu();
         }
         //Methods
-        public static void areaDescription()
+        public static void printPos(Player player)
         {
-            
+            Console.WriteLine("X: " + player.getPlayerX() + ". Y: " + player.getPlayerY() + ".");    
         }
-        public static bool itemCheck(Player player, Item item, Item item2, Item item3)
+    public static void areaDescription(Player player)
         {
-            bool itemFound;
+            Console.WriteLine(description.getDescription(player));
+        }
+        public static void itemCheck(Player player, Item item, Item item2, Item item3)
+        {
             if (player.getPlayerX() == item.getItemX() && player.getPlayerY() == item.getItemY())
             {
+
                 Console.WriteLine("You have found '" + item.getItemName() + "'. " + item.getItemDescription() + ".");
-                itemFound = true;
-                return itemFound;
-            }
-            else
-            {
-                itemFound = false;
-                return itemFound;
+                Console.Write("Would you like to pick it up?: ");
+                string input = (Console.ReadLine().ToLower());
+                if (input == "yes" || input == "y")
+                {
+                    item.setIsBeingCarried(true);
+
+                }
+                else if (input == "no" || input == "n")
+                {
+
+                }
+                else
+                {
+                    Console.Write("Incorrect input");
+                }
             }
         }
         public static void startMenu()
@@ -55,6 +70,7 @@ namespace treasureIsland
                 startMenu();
             }
         }
+        
         public static void playGame()
         {
             //Construct Objects to be found in the game
@@ -81,16 +97,15 @@ namespace treasureIsland
             while (input != "quit" || bottle.getHasBeenCarried() != "false" && sword.getHasBeenCarried() != "false" && chest.getHasBeenCarried() != "false")
             {
                 input = (Console.ReadLine().ToLower());
+
                 //Movement --- Add parameter passing to a method
                 if (input == "north" || input == "n")
                 {
-                    if (current.getPlayerX() > 0)
+                    if (current.getPlayerY() > 0)
                     {
-                        Console.WriteLine("You move North.");
-                        current.setPlayerX(current.getPlayerX() - 1);
-                        areaDescription();
-                        itemCheck(current, bottle, sword, chest);
-                    }
+                        Console.WriteLine("\nYou move North.\n");
+                        current.setPlayerY(current.getPlayerY() - 1);
+                        areaDescription(current);                    }
                     else
                     {
                         Console.WriteLine("You cannot move further North!");
@@ -98,12 +113,11 @@ namespace treasureIsland
                 }
                 else if (input == "south" || input == "s")
                 {
-                    if (current.getPlayerX() < 4)
+                    if (current.getPlayerY() < 4)
                     {
                         Console.WriteLine("You move South.");
-                        current.setPlayerX(current.getPlayerX() + 1);
-                        areaDescription();
-                        itemCheck(current, bottle, sword, chest);
+                        current.setPlayerY(current.getPlayerY() + 1);
+                        areaDescription(current);
                     }
                     else
                     {
@@ -112,26 +126,24 @@ namespace treasureIsland
                 }
                 else if (input == "east" || input == "e")
                 {
-                    if (current.getPlayerY() < 4)
+                    if (current.getPlayerX() < 4)
                     {
                         Console.WriteLine("You move East.");
-                        current.setPlayerY(current.getPlayerY() + 1);
-                        areaDescription();
-                        itemCheck(current, bottle, sword, chest);
+                        current.setPlayerX(current.getPlayerX() + 1);
+                        areaDescription(current);
                     }
-                    else
+                    else 
                     {
                         Console.WriteLine("You cannot move further East!");
                     }
                 }
                 else if (input == "west" || input == "w")
                 {
-                    if (current.getPlayerY() > 0)
+                    if (current.getPlayerX() > 0)
                     {
                         Console.WriteLine("You move West.");
-                        current.setPlayerY(current.getPlayerY() - 1);
-                        areaDescription();
-                        itemCheck(current, bottle, sword, chest);
+                        current.setPlayerX(current.getPlayerX() - 1);
+                        areaDescription(current);
                     }
                     else
                     {
