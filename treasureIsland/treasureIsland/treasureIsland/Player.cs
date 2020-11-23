@@ -33,9 +33,9 @@ namespace treasureIsland
         {
             return y;
         }
-        public string getIsCarrying()
+        public bool getIsCarrying()
         {
-            return Convert.ToString(isCarrying);
+            return isCarrying;
         }
         //Setters
         public void setPlayerName(string inName)
@@ -53,6 +53,74 @@ namespace treasureIsland
         public void setIsCarrying(bool inIsCarrying)
         {
             isCarrying = inIsCarrying;
+        }
+
+
+        //Methods
+        public void movement(String userInput, Player player)
+        {
+            string input = userInput;
+            //Movement --- Add parameter passing to a method
+            if (input == "north" || input == "n")
+            {
+                if (player.getPlayerY() > 0)
+                {
+                    Console.WriteLine("\nYou move North.\n");
+                    player.setPlayerY(player.getPlayerY() - 1);
+                    treasureIsland.areaDescription(player);
+                }
+                else
+                {
+                    Console.WriteLine("You cannot move further North!");
+                }
+            }
+            else if (input == "south" || input == "s")
+            {
+                if (player.getPlayerY() < 4)
+                {
+                    Console.WriteLine("You move South.");
+                    player.setPlayerY(player.getPlayerY() + 1);
+                    treasureIsland.areaDescription(player);
+                }
+                else
+                {
+                    Console.WriteLine("You cannot move further South!");
+                }
+            }
+            else if (input == "east" || input == "e")
+            {
+                if (player.getPlayerX() < 4)
+                {
+                    Console.WriteLine("You move East.");
+                    player.setPlayerX(player.getPlayerX() + 1);
+                    treasureIsland.areaDescription(player);
+                }
+                else
+                {
+                    Console.WriteLine("You cannot move further East!");
+                }
+            }
+            else if (input == "west" || input == "w")
+            {
+                if (player.getPlayerX() > 0)
+                {
+                    Console.WriteLine("You move West.");
+                    player.setPlayerX(player.getPlayerX() - 1);
+                    treasureIsland.areaDescription(player);
+                }
+                else
+                {
+                    Console.WriteLine("You cannot move further West!");
+                }
+            }
+            else if (input == "quit")
+            {
+                Console.Clear();
+                Console.WriteLine("You have failed to find all the items and left the Island.\nOne day you may return to try again...");
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
+                treasureIsland.startMenu();
+            }
         }
     }
 }

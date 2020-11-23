@@ -24,7 +24,7 @@ namespace treasureIsland
             description[1, 4] = "You're stood atop a cliff edge, the sea wildly crashing into the walls.\nThe cliff stretches to the East as far as you can see. The Jungle invites you in to the North\nand to the West, rocks have been piled up haphazardly.";
             description[2, 0] = "You're stood on the sand dunes of the Northern beach. The beach stretches\nto the West. To the East and South, the jungle surrounds you.\nTo the West, the beachs continues.";
             description[2, 1] = "You find the jungle is less dense to the North. It surrounds every other direction.\nYou can see scraps of metal to the South.";
-            description[2, 2] = "You find yourself stood in the middle of the jungle again, where you first started.\nThe jungle surrounds you from each direction.\nYou can see the wooden pillars to the East, and airplane seats to the West.";
+            description[2, 2] = "You find yourself stood in the middle of the jungle.\nThe jungle surrounds you from each direction.\nYou can see the wooden pillars to the East, and airplane seats to the West.";
             description[2, 3] = "You're still surrounded by the jungle to North, West, and East.\nThrough the last few trees in the South, you can hear waves.";
             description[2, 4] = "You stumble on the cliff edge, catching your footing at the last moment.\nThe cliff continues East and West as far as you can see.\nYou can feel the heat of the jungle to the North.";
             description[3, 0] = "You're in the Jungle, which becomes too dense and dark to advance further North.\nIt continues to the East and South. There is sand on\nthe floor that increases to the West.";

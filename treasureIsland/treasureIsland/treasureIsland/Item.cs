@@ -43,9 +43,9 @@ namespace treasureIsland
         {
             return Convert.ToString(isBeingCarried);
         }
-        public string getHasBeenCarried()
+        public bool getHasBeenCarried()
         {
-            return Convert.ToString(hasBeenCarried);
+            return hasBeenCarried;
         }
         //Setters
         public void setItemName(string inItemName)
