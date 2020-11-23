@@ -39,9 +39,9 @@ namespace treasureIsland
         {
             return y;
         }
-        public string getIsBeingCarried()
+        public bool getIsBeingCarried()
         {
-            return Convert.ToString(isBeingCarried);
+            return isBeingCarried;
         }
         public bool getHasBeenCarried()
         {

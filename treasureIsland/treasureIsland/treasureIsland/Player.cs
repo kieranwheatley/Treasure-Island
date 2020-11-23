@@ -57,7 +57,7 @@ namespace treasureIsland
 
 
         //Methods
-        public void movement(String userInput, Player player)
+        public void movement(String userInput, Player player, Item item, Item item2, Item item3)
         {
             string input = userInput;
             //Movement --- Add parameter passing to a method
@@ -67,7 +67,7 @@ namespace treasureIsland
                 {
                     Console.WriteLine("\nYou move North.\n");
                     player.setPlayerY(player.getPlayerY() - 1);
-                    treasureIsland.areaDescription(player);
+                    AreaDescription.areaDescription(player);
                 }
                 else
                 {
@@ -80,7 +80,7 @@ namespace treasureIsland
                 {
                     Console.WriteLine("You move South.");
                     player.setPlayerY(player.getPlayerY() + 1);
-                    treasureIsland.areaDescription(player);
+                    AreaDescription.areaDescription(player);
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace treasureIsland
                 {
                     Console.WriteLine("You move East.");
                     player.setPlayerX(player.getPlayerX() + 1);
-                    treasureIsland.areaDescription(player);
+                    AreaDescription.areaDescription(player);
                 }
                 else
                 {
@@ -106,7 +106,7 @@ namespace treasureIsland
                 {
                     Console.WriteLine("You move West.");
                     player.setPlayerX(player.getPlayerX() - 1);
-                    treasureIsland.areaDescription(player);
+                    AreaDescription.areaDescription(player);
                 }
                 else
                 {
@@ -119,7 +119,14 @@ namespace treasureIsland
                 Console.WriteLine("You have failed to find all the items and left the Island.\nOne day you may return to try again...");
                 System.Threading.Thread.Sleep(2000);
                 Console.Clear();
-                treasureIsland.startMenu();
+                StartMenu.startMenu();
+            }
+            else if (item.getHasBeenCarried() && item2.getHasBeenCarried() && item3.getHasBeenCarried())
+            {
+                Console.Clear();
+                Console.WriteLine("Congratulations! You found all the objects on the map and have completed the game!\n\nPress any key to exit the game.");
+                Console.ReadKey();
+                Environment.Exit(0);
             }
         }
     }

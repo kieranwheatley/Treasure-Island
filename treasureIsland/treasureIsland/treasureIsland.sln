@@ -9,6 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = Treasure Island is a text-based exploration game
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3C30F2E9-F706-4682-937E-CC9DF47B8E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
