@@ -14,12 +14,14 @@ Upon picking up and dropping all 3 items around the map, the player will win!
 * Start your adventure and join the Island!
 * Move around the map (with text descriptions to set the scene!)
 * Find all the objects scattered around the map and pick them up and drop them to win!
+* Read what is happening from the console window and, using text-to-speech, hear it!
 
 ## Completed ##
 * ~~Add the area descriptions to print when the player moves!~~
 * ~~Random player spawns on each play!~~
 * ~~Allow the user to pick up an item when they find them!~~
 * ~~Make it so the game can be won by dropping all the items!~~
+* ~~Added text-to-speech for anything written to the players console~~
 
 ## Next Steps
 * Make the item spawn positions random so it's different each time!
