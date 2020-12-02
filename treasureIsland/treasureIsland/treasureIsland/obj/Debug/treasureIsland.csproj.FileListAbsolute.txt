@@ -19,3 +19,8 @@ C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasure
 C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\bin\Debug\Treasure Island.pdb
 C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\obj\Debug\Treasure Island.exe
 C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\obj\Debug\Treasure Island.pdb
+C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\bin\Debug\Treasure Island.exe.manifest
+C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\bin\Debug\Treasure Island.application
+C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\obj\Debug\Treasure Island.TrustInfo.xml
+C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\obj\Debug\Treasure Island.exe.manifest
+C:\Users\Kieran\Documents\Programming\C#\Treasure-Island\treasureIsland\treasureIsland\treasureIsland\obj\Debug\Treasure Island.application

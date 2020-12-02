@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Speech.Synthesis;
 
 namespace treasureIsland
 {
     class ItemCheck
     {
+
         public static void itemCheck(Player player, Item item)
         {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.SetOutputToDefaultAudioDevice();
+            synth.SelectVoice("Microsoft Zira Desktop");
+
             if (player.getPlayerX() == item.getItemX() && player.getPlayerY() == item.getItemY() && !player.getIsCarrying())
             {
-                Console.Write("\nYou have found " + item.getItemName() + ". Would you like to pick it up?: ");
+                string found = "\nYou have found " + item.getItemName() + ". Would you like to pick it up?: ";
+                Console.Write("\n\n" + found);
+                synth.Speak(found);
                 string pickup = Console.ReadLine().ToLower();
                 switch (pickup)
                 {
@@ -20,17 +28,23 @@ namespace treasureIsland
                         PickupItem.pickupItem(player, item);
                         break;
                     case "no":
-                        Console.WriteLine("You leave the " + item.getItemName() + " where it is and carry on exploring.");
+                        string dontPickup = "You leave the " + item.getItemName() + " where it is and carry on exploring.";
+                        Console.WriteLine(dontPickup);
+                        synth.Speak(dontPickup);
                         break;
                     default:
-                        Console.WriteLine("Invalid input. Please enter Yes to pickup item or No to leave it.");
+                        string invalid = "Invalid input. Please enter Yes to pickup item or No to leave it.";
+                        Console.WriteLine(invalid);
+                        synth.Speak(invalid);
                         break;
                 }
                 return;
             }
             else if (player.getPlayerX() == item.getItemX() && player.getPlayerY() == item.getItemY() && player.getIsCarrying())
             {
-                Console.WriteLine("You find a " + item.getItemName() + " but as you are already carrying an object you cannot take another. Drop the one you have elsewhere and return for this.");
+                string alreadyCarrying = "You find a " + item.getItemName() + " but as you are already carrying an object you cannot take another. Drop the one you have elsewhere and return for this.";
+                Console.WriteLine(alreadyCarrying);
+                synth.Speak(alreadyCarrying);
                 return;
             }
             else
